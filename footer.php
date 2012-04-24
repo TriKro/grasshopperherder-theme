@@ -11,17 +11,21 @@
 
         </div><!-- .content -->
 	</div><!-- #main .content-wrapper -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'ghh_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'ghh' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'ghh' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'ghh' ), 'ghh', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- .site-footer .site-footer -->
 </div><!-- #page .hfeed .site -->
 
+<!-- share buttons, remove this if you ever switch to Sociable or similar -->
+	<script type="text/javascript">
+	  (function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+	
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	
+	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+	
 <?php wp_footer(); ?>
 
 </body>

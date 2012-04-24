@@ -30,4 +30,4 @@ get_header(); ?>
             <?php get_sidebar(); ?>
             </div>            
 		</div><!-- #primary .site-content .content-inner -->
-<?php /* get_footer(); */ ?>
+<?php get_footer(); ?>

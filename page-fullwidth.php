@@ -19,4 +19,4 @@ get_header(); ?>
 			</div><!-- #content .col1-->
 
 		</div><!-- #primary .site-content .content-inner -->
-<?php /* get_footer(); */ ?>
+<?php get_footer(); ?>
