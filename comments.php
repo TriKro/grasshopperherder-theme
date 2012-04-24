@@ -71,6 +71,9 @@
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'ghh' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(array('title_reply' => 'Leave a Comment' )); ?>
+	<?php comment_form(array(
+            'title_reply' => 'Leave a Comment',
+            'comment_notes_after' => '' 
+        )); ?>
 
 </div><!-- #comments .comments-area -->

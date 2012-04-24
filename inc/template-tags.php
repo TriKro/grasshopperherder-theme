@@ -138,11 +138,17 @@ endif; //ghh_posted_on_first
 
 if ( ! function_exists( 'ghh_posted_on' ) ) :
 function ghh_posted_on() {
-	printf( __( '<span class="%3$s"><time>%1$s</time> | %2$s Comments</span>', 'ghh' ),
+	printf( __( '<span class="%2$s"><time>%1$s</time>', 'ghh' ),
 		esc_attr( get_the_date( 'F d, Y' ) ),
-		esc_html( get_comments_number() ),
 		(get_comments_number() == 0) ? "comments-no" : "comments-num"
 	);
+	if(get_comments_number() != 0 ) {
+        printf( __(' | <a href="%2$s">%1$s Comments</a>', 'ghh'),
+            esc_html( get_comments_number() ),
+            esc_html( get_comments_link() )
+        );
+    }
+    echo "</span>";
 }
 endif;
 

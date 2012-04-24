@@ -89,4 +89,6 @@ class Nav_Walker extends Walker_Nav_Menu {
 
 	<div id="main" class="content-wrapper">
 		<div class="content">
+            <?php if(is_home()) : ?>
 			<aside><?php bloginfo( 'description' ); ?></aside>
+			<?php endif; ?>

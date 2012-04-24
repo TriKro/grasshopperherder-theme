@@ -14,10 +14,12 @@ if($wp_query->current_post == count($posts)-1) {
 }
  ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($extra_class); ?>>
-    <?php if ( has_post_thumbnail() ) {
-	   the_post_thumbnail();
-    } ?> 
-	<h5 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ghh' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h5>
+    <?php if ( has_post_thumbnail() ) : ?>
+        <a href="<?php the_permalink(); ?>">
+        <?php the_post_thumbnail(); ?>
+        </a>
+    <?php endif; ?> 
+	<h4 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ghh' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 
 	<?php if ( 'post' == get_post_type() ) : ?>
 	<div class="entry-meta">
@@ -25,6 +27,7 @@ if($wp_query->current_post == count($posts)-1) {
 	</div><!-- .entry-meta -->
 	<?php endif; ?>
 
+    <a href="<?php the_permalink(); ?>">
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
@@ -35,6 +38,7 @@ if($wp_query->current_post == count($posts)-1) {
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ghh' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
+	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php if($is_right_column) : ?>
     <div class="fix"></div>

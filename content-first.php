@@ -13,11 +13,14 @@
 		</time><!-- .entry-meta -->
 		<?php endif; ?>
 
-		<h1 class="entry-title"><span><?php the_title(); ?></span></h1>
+		<h1 class="entry-title"><span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></h1>
 
-        <div class="<?php echo (get_comments_number() == 0) ? "comments-no" : "comments-num" ?>"><?php comments_number(); ?></div>
+        <?php if(get_comments_number() != 0) : ?>
+        <div class="comments-num"><a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></div>
+        <?php endif; ?>
 	</header><!-- .entry-header -->
 
+    <a href="<?php the_permalink(); ?>">
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary post-content">
 		<?php the_excerpt(); ?>
@@ -28,6 +31,7 @@
 		<?php /* wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ghh' ), 'after' => '</div>' ) ); */ ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
+	</a>
 
 	<footer class="entry-meta post-footer">
 		<ul>
