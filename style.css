@@ -362,7 +362,11 @@ body {
 }
 
 .content-inner .post span.comments-no {
-    background: none;
+	background: none;
+	font: 12px Arial,Helvetica,Sans-Serif;
+	color: #acacac;
+	display: inline-block;
+	margin-bottom: 5px;
 }
 
 .content-inner .post p {
@@ -777,4 +781,8 @@ body {
     padding: 0;
     border: 0;
     float:right;
+}
+
+.alignright {
+    float: right;
 }
