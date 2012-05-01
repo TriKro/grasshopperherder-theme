@@ -65,7 +65,7 @@ class Nav_Walker extends Walker_Nav_Menu {
     function start_el(&$output, $item, $depth, $args) {
         parent::start_el($output, $item, $depth, $args);
         if($depth == 0) {
-            $output = $this->str_lreplace('<a href', "<a id='nav$this->count' href", $output);
+            $output = $this->str_lreplace('href', "id='nav$this->count' href", $output);
             $this->count++;
         }
     }
