@@ -348,12 +348,12 @@ body {
 	color: #474746;
 	padding-bottom: 10px;
 }
-.content-inner .post a, .content-inner .featured-post a {
+.content-inner .post p a, .content-inner .featured-post p a {
     text-decoration: none;
-    border-bottom: 1px solid #004A22;
+    border-bottom: 1px dotted #004A22;
     color: #004A22;
 }
-.content-inner .post a:hover,  .content-inner .featured-post a:hover {
+.content-inner .post p a:hover,  .content-inner .featured-post p a:hover {
     border-bottom: 1px solid #2EB96E;
     color: #2EB96E;
 }
@@ -704,6 +704,7 @@ body {
 }
 .single footer.entry-meta a:hover, .comments-area a:hover, .widget a:hover {
     color: #2EB96E;
+    border-bottom: 1px solid #2EB96E;
 }
 .single footer.entry-meta a:visited, .comments-area a:visited, .widget a:visited {
     color: #004A22;
