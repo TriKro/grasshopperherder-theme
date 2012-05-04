@@ -22,8 +22,10 @@ get_header(); ?>
 				<?php /* ghh_content_nav( 'nav-above' ); */ ?>
 
                 <?php /* first posts gets different layout */ ?>
-                <?php if(have_posts()) : the_post() ?>
-                    <?php 
+                <?php
+                    $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1; 
+                    if(have_posts() && $pageNumber == 1) : the_post() ?>
+                    <?php
                         get_template_part( 'content-first', get_post_format() );
                     ?>
                 <?php endif; ?>

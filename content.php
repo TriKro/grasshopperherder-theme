@@ -7,7 +7,12 @@
 
 <?php
 global $wp_query;
-$is_right_column = !($wp_query->current_post%2);
+$pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
+if($pageNumber == 1) {
+    $is_right_column = !($wp_query->current_post%2);
+} else {
+    $is_right_column = $wp_query->current_post%2;
+}
 $extra_class = $is_right_column ? "fr" : "";
 if($wp_query->current_post == count($posts)-1) {
     $extra_class .= " last";
@@ -34,11 +39,9 @@ if($wp_query->current_post == count($posts)-1) {
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php echo preg_replace(
-			"/\[caption .+?\[\/caption\]|\< *[img][^\>]*[.]*\>/i",
-			"",
-			get_the_content(__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ghh' ))
-			); ?>
+		<?php echo strip_tags(
+                do_shortcode(get_the_content(__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ghh' ))),
+                 '<strong><script>'); ?>
 
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ghh' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->

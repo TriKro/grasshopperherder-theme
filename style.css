@@ -619,8 +619,13 @@ a:hover {
 	color: #96958f;
 	font: 11px/20px Arial, Helvetica, Sans-Serif;
 }
+.post > a:last-child {
+    color: #474746;    
+}
 .entry-content blockquote {
-    margin: 10px 0 10px 50px;
+    margin: 10px 0 10px 20px;
+    background: url("./images/blockquote2.png") no-repeat scroll 0 0 transparent;
+    padding-left: 30px;
 }
 .content-inner .fullwidth {
 	float: left;
@@ -706,6 +711,7 @@ a:hover {
 .single footer.entry-meta a, .comments-area a, .widget a {
     color: #007236;
     text-decoration: none;
+    border: none;
 }
 .single footer.entry-meta a:hover, .comments-area a:hover, .widget a:hover {
     color: #2EB96E;
