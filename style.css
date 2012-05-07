@@ -226,6 +226,7 @@ body {
 }
 .content-inner .featured-post > a {
     text-decoration: none;
+    color: #474746;
 }
 .content-inner .featured-post .post-header{
 	position: relative;
@@ -297,6 +298,7 @@ body {
 }
 .content-inner .featured-post .post-content img {
 	margin-bottom: 17px;
+	border: none;
 }
 .content-inner .featured-post .post-content p {
 	font-size: 14px;
@@ -403,6 +405,14 @@ a:hover {
 .content-inner .post.last {
 	zoom: 1;
 }
+.content-inner .post a .read-more {
+    border-bottom: 1px dotted #004A22;
+    color: #004A22;
+}
+.content-inner .post a:hover .read-more {
+    border-bottom: 1px solid #2EB96E;
+    color: #2EB96E;
+}
 #pagination {
 	width: 625px;
 	height: 65px;
@@ -413,6 +423,7 @@ a:hover {
 }
 #pagination a {
 	text-decoration:none;
+	border:none;
 }
 #pagination #pagin-prev {
 	position: absolute;
@@ -701,6 +712,7 @@ a:hover {
 
 .entry-content {
     padding-bottom: 10px;
+    font-family: Arial,Helvetica,Sans-Serif;
 }
 
 .single footer.entry-meta {

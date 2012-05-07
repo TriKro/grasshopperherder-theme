@@ -27,7 +27,9 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content post-content">
-		<?php the_content('',FALSE,''); ?>
+		<?php echo strip_tags(
+                do_shortcode(wpautop(get_the_content('', FALSE, ''))),
+                 '<strong><script><blockquote><p><br><div><h1><h2><h3><h4><h5><h6>'); ?>
 		<?php /* wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ghh' ), 'after' => '</div>' ) ); */ ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

@@ -40,10 +40,11 @@ if($wp_query->current_post == count($posts)-1) {
 	<?php else : ?>
 	<div class="entry-content">
 		<?php echo strip_tags(
-                do_shortcode(get_the_content(__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ghh' ))),
-                 '<strong><script>'); ?>
+                do_shortcode(wpautop(get_the_content(''))),
+                 '<strong><script><blockquote><p><br><div><h1><h2><h3><h4><h5><h6>'); ?>
 
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ghh' ), 'after' => '</div>' ) ); ?>
+		<p><span class="read-more"><?php _e( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ghh' ); ?></span></p>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 	</a>
