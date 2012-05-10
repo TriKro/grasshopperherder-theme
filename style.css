@@ -826,3 +826,7 @@ a:hover {
 .alignright {
     float: right;
 }
+
+a.noborder {
+  border: none;
+}
