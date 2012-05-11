@@ -182,7 +182,7 @@ body {
 	padding-bottom: 24px;
 	margin-bottom: 50px;
 }
-.page header h1, .content > aside {
+.page header h1, #content > header h1, .content > aside {
 	font: 36px/85px 'LeagueGothicRegular';
 	color: #999999;
 	text-align:center;
@@ -705,6 +705,7 @@ a:hover {
 	top: 0;
 	left: -18px;
 	height: 36px;
+	border: none;
 }
 .header ul.sub-menu li a:hover {
 	background: url(./images/bg.sub-menu-active.png) no-repeat;
