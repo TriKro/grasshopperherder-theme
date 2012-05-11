@@ -10,8 +10,8 @@
 
 get_header(); ?>
 
-		<section id="primary" class="site-content">
-			<div id="content" role="main">
+		<div id="primary" class="site-content content-inner">
+			<div id="content" role="main" class="col1">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -69,7 +69,14 @@ get_header(); ?>
 
 				<?php rewind_posts(); ?>
 
-				<?php ghh_content_nav( 'nav-above' ); ?>
+                <?php /* first posts gets different layout */ ?>
+                <?php
+                    $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1; 
+                    if(have_posts() && $pageNumber == 1) : the_post() ?>
+                    <?php
+                        get_template_part( 'content-first', get_post_format() );
+                    ?>
+                <?php endif; ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -84,7 +91,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php ghh_content_nav( 'nav-below' ); ?>
+				<?php ghh_content_nav( 'pagination' ); ?>
 
 			<?php else : ?>
 
@@ -92,8 +99,10 @@ get_header(); ?>
 
 			<?php endif; ?>
 
-			</div><!-- #content -->
-		</section><!-- #primary .site-content -->
+			</div><!-- #content .col1-->
 
-<?php get_sidebar(); ?>
+            <div class="col2">
+            <?php get_sidebar(); ?>
+            </div>            
+		</div><!-- #primary .site-content .content-inner -->
 <?php get_footer(); ?>
