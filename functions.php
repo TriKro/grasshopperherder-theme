@@ -128,8 +128,11 @@ add_action( 'wp_enqueue_scripts', 'ghh_scripts' );
 
 add_filter( 'widget_title', add_get_social_icons);
 function add_get_social_icons($title) {
-  if($title = 'GET SOCIAL') {
-    return $title . "icons will go here";
+  if($title == 'GET SOCIAL') {
+    return $title . '<a href="https://twitter.com/#!/TriKro"><img src="' . get_template_directory_uri() .'/images/ico.social-twitter.png"></a>'
+                  . '<a href="http://facebook.com/grasshopperherder"><img src="' . get_template_directory_uri() .'/images/ico.social-facebook.png"></a>'
+                  . '<a href="https://plus.google.com/u/0/115754677320235199417"><img src="' . get_template_directory_uri() .'/images/ico.social-google.png"></a>'
+                  . '<a href="http://grasshopperherder.com/feed/"><img src="' . get_template_directory_uri() .'/images/ico.social-rss.png"></a>';
   } else {
     return $title;
   }
