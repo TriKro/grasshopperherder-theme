@@ -125,3 +125,12 @@ add_action( 'wp_enqueue_scripts', 'ghh_scripts' );
  * Implement the Custom Header feature
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
+
+add_filter( 'widget_title', add_get_social_icons);
+function add_get_social_icons($title) {
+  if($title = 'GET SOCIAL') {
+    return $title . "icons will go here";
+  } else {
+    return $title;
+  }
+}
