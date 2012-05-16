@@ -828,6 +828,15 @@ a:hover {
     float: right;
 }
 
-a.noborder {
+a.noborder, .content-inner .col2 .widget-title a:hover {
   border: none;
+}
+
+.content-inner .col2 .widget-title a img {
+  padding-top: 0;
+  padding-left: 10px;
+}
+
+.content-inner article.post .entry-content {
+  max-height: 150px;
 }

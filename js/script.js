@@ -13,4 +13,6 @@ jQuery(document).ready(function(){
 			jQuery(this).removeClass('hovered');
 		}
 	);
+	
+	jQuery('.content-inner article.post .entry-content').dotdotdot();
 });

@@ -33,20 +33,16 @@ if($wp_query->current_post == count($posts)-1) {
 	<?php endif; ?>
 
     <a href="<?php the_permalink(); ?>">
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
+
 	<div class="entry-content">
 		<?php echo strip_tags(
                 do_shortcode(wpautop(get_the_content(''))),
                  '<strong><script><blockquote><p><br><div><h1><h2><h3><h4><h5><h6>'); ?>
 
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ghh' ), 'after' => '</div>' ) ); ?>
-		<p><span class="read-more"><?php _e( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ghh' ); ?></span></p>
 	</div><!-- .entry-content -->
-	<?php endif; ?>
+	<p><span class="read-more"><?php _e( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ghh' ); ?></span></p>
+
 	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php if($is_right_column) : ?>
