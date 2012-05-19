@@ -839,4 +839,5 @@ a.noborder, .content-inner .col2 .widget-title a:hover {
 
 .content-inner article.post .entry-content {
   max-height: 150px;
+  overflow: hidden;
 }
