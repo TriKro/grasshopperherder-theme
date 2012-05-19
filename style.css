@@ -42,6 +42,20 @@ body {
 ol, ul {
 	list-style: none;
 }
+
+article ol, article ul {
+	line-height: 1.2em;
+	margin-left: 2.5em;
+}
+
+article ol {
+	list-style: decimal;
+}
+
+article ul {
+	list-style: disc;
+}
+
 blockquote, q {
 	quotes: none;
 }
