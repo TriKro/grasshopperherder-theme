@@ -841,3 +841,14 @@ a.noborder, .content-inner .col2 .widget-title a:hover {
   max-height: 150px;
   overflow: hidden;
 }
+
+/* mailchimp widget finetuning */
+.col2 #mc_embed_signup input.button {
+  float: none;
+  text-indent: 27px;
+  width: 50%
+}
+
+.col2 #mc_embed_signup label {
+  font-weight: normal;
+}
