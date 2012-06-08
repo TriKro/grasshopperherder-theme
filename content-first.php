@@ -75,27 +75,11 @@
 	<footer class="entry-meta post-footer">
 
 		<ul>
-
-			<li><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></li>
-
-		
-
-    		<li><script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right"></script></li>
-
-								
-
-			<li><iframe src="//www.facebook.com/plugins/like.php?href=<?php the_permalink(); ?>&amp;send=false&amp;layout=button_count&amp;width=125&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:125px; height:21px; margin-top: 1px" allowTransparency="true"></iframe></li>
-
-								
-
-			<li><g:plusone size="medium"></g:plusone></li>
-
-								
-
-			<li><a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>" class="pin-it-button" count-layout="none"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
-
-						
-
+			<li><?php dd_twitter_generate('Compact','trikro') ?></li>
+    		<li><?php dd_linkedin_generate('NoCount') ?></li>
+			<li><?php dd_fblike_generate('Like Button Count') ?></li>
+			<li><?php dd_google1_generate('Compact (20px)') ?></li>
+			<li><?php dd_pinterest_generate('Compact') ?></li>
 		</ul>
 
 		<a href="<?php the_permalink(); ?>" class="continue-reading">CONTINUE READING</a>
