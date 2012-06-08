@@ -95,7 +95,7 @@ p, .widget {
 	line-height: 1.5em;
 }
 .single p, .page p {
-	padding: 1em;
+	padding: 1em 0;
 }
 body {
 	background: url(./images/bg.grass.jpg) repeat-x center top #d9dde4;
@@ -353,6 +353,7 @@ body {
 .content-inner h3 {
 	font: 23px/45px 'LeagueGothicRegular';
 	color: #4a4a4a;
+	margin-left: -1em;
 }
 .content-inner .post {
 	width: 281px;
@@ -729,6 +730,7 @@ a:hover {
 
 .entry-content {
     padding-bottom: 10px;
+    margin: 0 1em;
     font-family: Arial,Helvetica,Sans-Serif;
 }
 
