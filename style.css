@@ -46,6 +46,7 @@ ol, ul {
 article ol, article ul {
 	line-height: 1.3em;
 	margin-left: 2.5em;
+	margin-bottom: 1em;
 }
 
 article ol {
