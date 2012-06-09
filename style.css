@@ -95,7 +95,7 @@ p, .widget {
 	line-height: 1.5em;
 }
 .single p, .page p {
-	padding: 1em 0;
+	margin: 1em 0;
 }
 body {
 	background: url(./images/bg.grass.jpg) repeat-x center top #d9dde4;
@@ -859,6 +859,7 @@ a.noborder, .content-inner .col2 .widget-title a:hover {
   max-height: 150px;
   overflow: hidden;
 }
+
 
 /* mailchimp widget finetuning */
 .col2 #mc_embed_signup input.button {
