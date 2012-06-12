@@ -368,6 +368,17 @@ body {
 .content-inner .post a.post-thumbnail {
 	border: none;
 }
+
+.content-inner .entry-content h2 {
+	font: 2em 'LeagueGothicRegular';
+	padding-top: 1.1em;
+}
+
+.content-inner .entry-content h3 {
+	font: 1.5em 'LeagueGothicRegular';
+	padding-top: 1.1em;
+}
+
 .content-inner .post h4 {
 	font: 23px/24px 'LeagueGothicRegular';
 	color: #474746;
