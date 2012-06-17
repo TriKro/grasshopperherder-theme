@@ -279,9 +279,10 @@ body {
 	left: -53px;
 }
 .content-inner .featured-post .post-header h1 span{
-	background: url(./images/ico.cloud.jpg) no-repeat 12px 13px;
+	// background: url(./images/ico.cloud.jpg) no-repeat 12px 13px;
 	padding-top: 2px;
-	padding-left: 54px;
+	// padding-left: 34px;
+	padding-left: 15px;
 	padding-right: 15px;
 	line-height: 54px;
 	display: inline-block;
