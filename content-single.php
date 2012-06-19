@@ -24,7 +24,14 @@
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ghh' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-
+	<div class="bottom-sharing-widgets">
+		<?php
+			if(function_exists('dd_twitter_generate')){dd_twitter_generate('Normal','TriKro');}
+			if(function_exists('dd_linkedin_generate')){dd_linkedin_generate('Normal');} ?>
+		<?php if(function_exists('dd_fblike_generate')){dd_fblike_generate('Like Box Count');} ?>
+		<?php if(function_exists('dd_google1_generate')){dd_google1_generate('Normal');} ?>
+		<?php if(function_exists('dd_pinterest_generate')){dd_pinterest_generate('Normal');} ?>
+	</div>
 
 	<footer class="entry-meta">
 		Posted on 

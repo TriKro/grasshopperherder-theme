@@ -874,7 +874,7 @@ a.noborder, .content-inner .col2 .widget-title a:hover {
 }
 
 
-/* mailchimp widget finetuning */
+/* mailchimp widget fine tuning */
 .col2 #mc_embed_signup input.button {
   float: none;
   text-indent: 27px;
@@ -883,4 +883,10 @@ a.noborder, .content-inner .col2 .widget-title a:hover {
 
 .col2 #mc_embed_signup label {
   font-weight: normal;
+}
+
+/* Bottom sharing button fine tuning */
+
+.bottom-sharing-widgets .twitter-share-button, .bottom-sharing-widgets .dd-linkedin-share {
+	float: left;
 }
