@@ -9,7 +9,7 @@
 	<header class="entry-header post-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<time class="entry-meta date">
-			<?php ghh_posted_on_first(); ?>
+			<!-- <?php ghh_posted_on_first(); ?> -->
 		</time><!-- .entry-meta -->
 		<?php endif; ?>
 

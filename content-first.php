@@ -20,7 +20,7 @@
 
 		<time class="entry-meta date">
 
-			<?php ghh_posted_on_first(); ?>
+			<!-- <?php ghh_posted_on_first(); ?> -->
 
 		</time><!-- .entry-meta -->
 
